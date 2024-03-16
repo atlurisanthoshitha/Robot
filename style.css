@@ -1,0 +1,197 @@
+.main{
+    border: 3px solid black;
+    height: 500px;
+    margin-top: 100px;
+    background: mistyrose;
+    
+}
+.main:hover{
+    background: rgb(232, 200, 157);
+    transform: scale(30px);
+    animation: move 1s 0.1s 10 ;
+}
+
+
+.face{
+    background: chartreuse;
+    height: 150px;
+    width: 150px;
+    border-radius: 100% 100% 0 0;
+    margin: auto;
+    margin-top: 20px;
+}
+.main:hover .face {
+    animation: moveface 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+@keyframes moveface {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1);
+    }
+    40% {
+        transform: rotate(250deg) scale(1.1);
+    }
+    60% {
+        transform: rotate(250deg) scale(1.2);
+    }
+    80% {
+        transform: rotate(0deg) scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.eyes{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+.main:hover .eyes{
+    animation: moveeyes 1.2s 0.5s 500;
+    
+}
+@keyframes moveeyes{
+    0%{
+        transform: scale(0.7);
+    }
+}
+.leye,.reye{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: black;
+}
+
+
+.body1{
+    display: flex;
+    justify-content: space-evenly;
+    width: 250px;
+    margin: auto;
+    margin-top: 10px;
+}
+.main:hover .body1{
+    animation: movebody 1.2s 0.5s 500;
+}
+/* @keyframes movebody{
+   0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(60deg);
+    }
+    100% {
+        transform: rotate(-60deg);
+    }
+
+} */
+
+
+.larm{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+.main:hover .larm{
+    transform: rotate(60deg);
+    transition: top;
+}
+
+.center{
+    height: 150px;
+    width: 150px;
+    background: chartreuse;
+    border-radius: 0 0 40% 40%;
+}
+
+
+.rarm{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+.main:hover .rarm{
+    transform: rotate(60deg);
+    transition: top;
+}
+
+.legs{
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+    margin: auto;
+    margin-top: -20px;  
+}
+
+
+.lleg{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+}
+.main:hover .lleg{
+    transform: rotate(60deg);
+}
+
+
+.rleg{
+    height: 75px;
+    width: 25px;
+    background: chartreuse;
+    border-radius: 50px;
+}
+.main:hover .rleg{
+    transform: rotate(60deg);
+}
+
+.main:hover .larm, .main:hover .rarm {
+    animation: moveArms 0.5s infinite;
+}
+
+.main:hover .lleg, .main:hover .rleg {
+    animation: moveLegs 0.5s infinite;
+}
+
+@keyframes moveArms {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(60deg);
+    }
+    100% {
+        transform: rotate(-60deg);
+    }
+}
+
+@keyframes moveLegs {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(60deg);
+    }
+    100% {
+        transform: rotate(-60deg);
+    }
+}
+
+@keyframes blinkingBackground {
+    0% { background: #3498db; } /* Wet Asphalt */
+    25% { background: #2ecc71; } /* Emerald */
+    50% { background: #9b59b6; } /* Amethyst */
+    75% { background: #e67e22; } /* Carrot */
+    100% { background: #34495e; } /* Midnight Blue */
+}
+
+.main:hover {
+    animation: blinkingBackground 0.4s infinite;
+}
